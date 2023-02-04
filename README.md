@@ -25,7 +25,7 @@ The following cloud-services are used to provide different functionalities:
 
 After a post is submitted to the API, the image is stored in the S3 service and the description along with its corresponding image ID is stored in the database. The post ID is enqueued into the RabbitMQ cloud-service for further process. On the other side. A different process listens on the RabbitMQ and receives the recently submitted image IDs. This service then uses the image tagging service to match the image with the description. The result of this matching is emailed to the submitting user.
 
-![Image contains the architecture of the project]( "Architecture of the project")
+![Image contains the architecture of the project](https://github.com/Amir-Int/ebay/blob/main/assets/architecture.JPG "Architecture of the project")
 
 # Usage
 
