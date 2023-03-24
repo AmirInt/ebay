@@ -3,7 +3,7 @@ from pymysql import cursors
 pymysql.connections.Connection
 
 class DatabaseInteractor:
-    """ Responsible for interacting with the database cloud service
+    """Responsible for interacting with the database cloud service.
     
     Attributes:
         connection (pymysql.connections.Connection)
@@ -33,7 +33,7 @@ class DatabaseInteractor:
         print("Connected to database...")
 
     async def deposit_to_database(self, id: int, description: str, email: str):
-        """ Inserts a new record to the database
+        """Inserts a new record to the database.
         
         Args:
             id (str): The new record's id
@@ -50,7 +50,7 @@ class DatabaseInteractor:
             pass
     
     def update_record(self, id: int, state: str, category: str):
-        """ Updates an existing record in the database
+        """Updates an existing record in the database.
         
         Args:
             id (str): The new record's id
@@ -68,7 +68,7 @@ class DatabaseInteractor:
             pass
     
     def get_record(self, id: int):
-        """ Returns an existing record to the database
+        """Returns an existing record to the database.
         
         Args:
             id (str): The record's id

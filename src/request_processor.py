@@ -16,7 +16,7 @@ database_interactor = DatabaseInteractor(drop_table=False)
 
 
 def send_email(email: str, state: str) -> requests.Response:
-    """ Uses the Mailgun API to send confirmation/rejection emails to users
+    """Uses the Mailgun API to send confirmation/rejection emails to users.
     
     Args:
         email (str): The receipient's email address
@@ -40,8 +40,7 @@ def send_email(email: str, state: str) -> requests.Response:
 
 
 def reveiw_message_tags(labels: dict) -> str:
-    """ Checks the incoming labels for the tag "vehicle" with a confidence
-        higher than 50%.
+    """Checks the incoming labels for the tag "vehicle" with a confidence higher than 50%.
 
     Args:
         labels (dict): The given tags 
@@ -58,8 +57,7 @@ def reveiw_message_tags(labels: dict) -> str:
     
 
 def message_arrival_callback(ch, method, properties, body: bytes) -> None:
-    """ The callback used when the RabbitMQ signals and returns a message enqueuing,
-        and determines if the image is vehicle-relevant or not.
+    """The callback used when the RabbitMQ signals and returns a message enqueuing.
 
     Args:
         ch (): What?

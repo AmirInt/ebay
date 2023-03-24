@@ -17,8 +17,7 @@ database_interactor = DatabaseInteractor(drop_table=True)
 s3_interactor = S3Interactor()
 
 async def read_file(file: UploadFile):
-    """ Assigns a new id to the given file and reads the content of
-        the UploadFile object given.
+    """Assigns a new id to the given file and reads the content of the UploadFile object given.
     
     Args:
         file (UploadFile)
@@ -39,7 +38,7 @@ app = FastAPI()
 
 @app.get("/status/{post_id}")
 async def check_post_status(post_id: int):
-    """ The get method API
+    """The get method API.
     
     Args:
         post_id (int): The id of the posted material
@@ -74,7 +73,7 @@ async def post_submission(
     file: UploadFile = File(...),
     description: str = Form(...),
     email: str = Form(regex= r"([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+")):
-    """ The post method API
+    """The post method API.
     
     Args:
         file (fastapi.UploadFile): The posted image

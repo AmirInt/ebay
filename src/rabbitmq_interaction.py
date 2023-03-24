@@ -4,7 +4,7 @@ import pika
 
 
 def enqueue_to_rabbitmq(id: int):
-    """ Uses the cloudAMPQ API to enqueue the given 'id' to the queue
+    """Uses the cloudAMPQ API to enqueue the given 'id' to the queue.
     
     Args:
         id (int): The given id
@@ -23,8 +23,7 @@ def enqueue_to_rabbitmq(id: int):
 
 
 class RabbitMqListener:
-    """ RabbitMqListener is responsible for subscribing on the RabbigMQ service
-        to get the newly enqueued messages.
+    """Responsible for subscribing to the RabbigMQ service to get the newly enqueued messages.
     """
     def __init__(self, callback):
         try:
